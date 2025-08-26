@@ -1,19 +1,19 @@
-# ----- Core app framework -----
+# ---- Streamlit Cloud / Python 3.11 friendly ----
 streamlit>=1.36
 
-# ----- Data wrangling -----
+# ---- Data ----
 pandas>=2.2
 numpy>=1.26
 
-# ----- Visualization -----
+# ---- Charts & static export ----
 plotly>=5.22
-kaleido>=0.2.1  # enables Plotly static image export for PDF/PPT
+kaleido==0.2.1    # Plotly static image engine (bundles Chromium; no Chrome needed)
 
-# ----- Excel/CSV I/O -----
-openpyxl>=3.1   # .xlsx reader
-xlrd>=2.0       # .xls (legacy) reader
+# ---- Excel I/O ----
+openpyxl>=3.1     # .xlsx reader/writer
+xlrd>=2.0         # only if you read legacy .xls
 
-# ----- Media/Exports -----
-Pillow>=10.3    # image handling
-reportlab>=4.1  # PDF generation
+# ---- Optional media/exports (used in your app) ----
+Pillow>=10.3      # image handling
+reportlab>=4.1    # PDF generation
 python-pptx>=0.6.23  # PowerPoint export
